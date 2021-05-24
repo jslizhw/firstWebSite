@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "utf-8">
+        <meta name = "author" content = "LI Zhiwei">
+        <meta name = "discription" content = "CW">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CW_City Sushi order page</title>
+        <link rel = "stylesheet" href = "CSS/overall.css" type = "text/css" media = "all">
+        <link rel = "stylesheet" href = "CSS/orderpage.css" type = "text/css" media = "all">
+        <link rel = "stylesheet" href = "CSS/print.css" type = "text/css" media = "print">
+        <script src="JavaScript/CW3.js"></script>
+    </head>
+    <body>
+        <div id = "header">
+            <!--Header-->
+            <h1><img src = "images/Sushi-96.png" alt = "logo"><span id = "title">CITY SUSHI</span></h1>
+        </div>
+        <div id = "pagecontainer">
+            <div id = "navblock">
+                <a href = "CW_infopage.html">Home Page</a>
+                <a href = "#menu">Menu</a>
+                <a href = "#order">Ordered Item</a>
+            </div>
+            <div id = "menu">
+                <!--block4 order menu-->
+                <form method = "GET" action = "citysushi.php">
+                    <fieldset>
+                        <legend>Menu</legend>
+                        <div class = "bar">
+                            <div class = "dropmenu one">
+                                <label class = "button s-0" id = "s-0">Sushi</label>
+                                <div id = "sushi" class = "grid">
+                                    <div class = "dropdown s-1">
+                                        <img src = "images/sushi-1.jpg" title = "Sushi Slash" alt = "sushi-1" id = "i-s-1">
+                                        <input type = "number" value = "1" min = "1" name = "sushi-1" id = "q-s-1">
+                                        <input type = "button" value = "add" id = "b-s-1">
+                                    </div>
+                                    <div class = "dropdown s-2">
+                                        <img src = "images/sushi-2.jpg" title = "Cucumber Sushi" alt = "sushi-2" id = "i-s-2">
+                                        <input type = "number" value = "1" min = "1" name = "sushi-2" id = "q-s-2">
+                                        <input type = "button" value = "add" id = "b-s-2">
+                                    </div>
+                                    <div class = "dropdown s-3">
+                                        <img src = "images/sushi-3.jpg" title = "Laver hand scroll" alt = "sushi-3" id = "i-s-3">
+                                        <input type = "number" value = "1" min = "1" name = "sushi-3" id = "q-s-3">
+                                        <input type = "button" value = "add" id = "b-s-3">
+                                    </div>
+                                    <div class = "dropdown s-4">
+                                        <img src = "images/sushi-4.jpg" title = "Salmon Sushi" alt = "sushi-4" id = "i-s-4">
+                                        <input type = "number" value = "1" min = "1" name = "sushi-4" id = "q-s-4">
+                                        <input type = "button" value = "add" id = "b-s-4">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class = "dropmenu two">
+                                <label class = "button d-0" id = "d-0">Drinks</label>
+                                <div id = "drinks" class = "grid">
+                                    <div class = "dropdown d-1">
+                                        <img src = "images/drink-1.jpg" title = "Strawberry Milkshake" alt = "drink-1" id = "i-d-1">
+                                        <input type = "number" value = "1" min = "1" name = "drink-1" id = "q-d-1">
+                                        <input type = "button" value = "add" id = "b-d-1">
+                                    </div>
+                                    <div class = "dropdown d-2">
+                                        <img src = "images/drink-2.jpg" title = "Vanilla soda" alt = "drink-2" id = "i-d-2">
+                                        <input type = "number" value = "1" min = "1" name = "drink-2" id = "q-d-2">
+                                        <input type = "button" value = "add" id = "b-d-2">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class = "dropmenu three">
+                                <label class = "button ds-0" id = "ds-0">Dessert</label>
+                                <div id = "dessert" class = "grid">
+                                    <div class = "dropdown ds-1">
+                                        <img src = "images/dessert-1.jpg" title = "Cheesecake" alt = "dessert-1" id = "i-ds-1">
+                                        <input type = "number" value = "1" min = "1" name = "dessert-1" id = "q-ds-1">
+                                        <input type = "button" value = "add" id = "b-ds-1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <script>
+                //dropdown menu
+                document.getElementById('d-0').onclick = ShowDrink;
+                function ShowDrink(){
+                    document.getElementById('sushi').style.display = "none";
+                    document.getElementById('s-0').style.backgroundColor = "#000000";
+                    document.getElementById('s-0').style.color = "#fff";
+                    document.getElementById('dessert').style.display = "none";
+                    document.getElementById('ds-0').style.backgroundColor = "#000000";
+                    document.getElementById('ds-0').style.color = "#fff";
+                    document.getElementById('drinks').style.display = "grid";
+                    document.getElementById('d-0').style.backgroundColor = "#fff";
+                    document.getElementById('d-0').style.color = "#000000";
+                }
+                document.getElementById('ds-0').onclick = ShowDessert;
+                function ShowDessert(){
+                    document.getElementById('sushi').style.display = "none";
+                    document.getElementById('s-0').style.backgroundColor = "#000000";
+                    document.getElementById('s-0').style.color = "#fff";
+                    document.getElementById('dessert').style.display = "grid";
+                    document.getElementById('ds-0').style.backgroundColor = "#fff";
+                    document.getElementById('ds-0').style.color = "#000000";
+                    document.getElementById('drinks').style.display = "none";
+                    document.getElementById('d-0').style.backgroundColor = "#000000";
+                    document.getElementById('d-0').style.color = "#fff";
+                }
+                document.getElementById('s-0').onclick = ShowSushi;
+                function ShowSushi(){
+                    document.getElementById('sushi').style.display = "grid";
+                    document.getElementById('s-0').style.backgroundColor = "#fff";
+                    document.getElementById('s-0').style.color = "#000000";
+                    document.getElementById('dessert').style.display = "none";
+                    document.getElementById('ds-0').style.backgroundColor = "#000000";
+                    document.getElementById('ds-0').style.color = "#fff";
+                    document.getElementById('drinks').style.display = "none";
+                    document.getElementById('d-0').style.backgroundColor = "#000000";
+                    document.getElementById('d-0').style.color = "#fff";
+                }
+            </script>
+            <div id="interest">
+                <p>More Eat More <span>Fun!!!</span></p>
+            </div>
+
+            <script>
+                var i = 5;
+                var quantity = 0;
+                function items(){
+                    x = document.querySelector("#items");
+                    x.innerHTML = i-5;
+                }
+
+                function recal(){
+                    var mytbody = document.querySelector("#tbody");
+                    var k = 5;
+                    var total = 0;
+                    for(k;k<i;k++){
+                        total = total + parseInt(mytbody.rows[k].cells[1].innerHTML);
+                    }
+                    document.querySelector("#total").innerHTML = total;
+                }
+                //sushi
+                document.querySelector("#b-s-1").onclick = s_1;
+                document.querySelector("#b-s-2").onclick = s_2;
+                document.querySelector("#b-s-3").onclick = s_3;
+                document.querySelector("#b-s-4").onclick = s_4;
+                function s_1(){
+                    var x = document.querySelector("#q-s-1").value;
+                    var r = document.querySelector("#tbody").insertRow(i);
+                    var name = r.insertCell(0);
+                    var q = r.insertCell(1);
+                    name.innerHTML = document.querySelector("#i-s-1").title;
+                    q.innerHTML = x;
+                    i = i + 1;
+                    items();
+                    recal();
+                }
+                function s_2(){
+                    var x = document.querySelector("#q-s-2").value;
+                    var r = document.querySelector("#tbody").insertRow(i);
+                    var name = r.insertCell(0);
+                    var q = r.insertCell(1);
+                    name.innerHTML = document.querySelector("#i-s-2").title;
+                    q.innerHTML = x;
+                    i = i + 1;
+                    items();
+                    recal();
+
+                }
+                function s_3(){
+                    var x = document.querySelector("#q-s-3").value;
+                    var r = document.querySelector("#tbody").insertRow(i);
+                    var name = r.insertCell(0);
+                    var q = r.insertCell(1);
+                    name.innerHTML = document.querySelector("#i-s-3").title;
+                    q.innerHTML = x;
+                    i = i + 1;
+                    items();
+                    recal();
+
+                }
+                function s_4(){
+                    var x = document.querySelector("#q-s-4").value;
+                    var r = document.querySelector("#tbody").insertRow(i);
+                    var name = r.insertCell(0);
+                    var q = r.insertCell(1);
+                    name.innerHTML = document.querySelector("#i-s-4").title;
+                    q.innerHTML = x;
+                    i = i + 1;
+                    items();
+                    recal();
+
+                }
+
+                //drinks
+                document.querySelector("#b-d-1").onclick = d_1;
+                document.querySelector("#b-d-2").onclick = d_2;
+
+                function d_1(){
+                    var x = document.querySelector("#q-d-1").value;
+                    var r = document.querySelector("#tbody").insertRow(i);
+                    var name = r.insertCell(0);
+                    var q = r.insertCell(1);
+                    name.innerHTML = document.querySelector("#i-d-1").title;
+                    q.innerHTML = x;
+                    i = i + 1;
+                    items();
+                    recal();
+
+                }
+                function d_2(){
+                    var x = document.querySelector("#q-d-2").value;
+                    var r = document.querySelector("#tbody").insertRow(i);
+                    var name = r.insertCell(0);
+                    var q = r.insertCell(1);
+                    name.innerHTML = document.querySelector("#i-d-2").title;
+                    q.innerHTML = x;
+                    i = i + 1;
+                    items();
+                    recal();
+                }
+
+                //dessert
+                document.querySelector("#b-ds-1").onclick = ds_1;
+
+                function ds_1(){
+                    var x = document.querySelector("#q-ds-1").value;
+                    var r = document.querySelector("#tbody").insertRow(i);
+                    var name = r.insertCell(0);
+                    var q = r.insertCell(1);
+                    name.innerHTML = document.querySelector("#i-ds-1").title;
+                    q.innerHTML = x;
+                    i = i + 1;
+                    items();
+                    recal();
+                }
+
+                //undo
+                function undo(){
+                    var mytbody = document.querySelector("#tbody");
+                    if(i>5){
+                        mytbody.deleteRow(i-1);
+                        i = i - 1;
+                        recal();
+                        items();
+                    }
+                    else{
+                        alert("Nothing to cancel");
+                    }
+                }
+            </script>
+
+            <div id = "order">
+                <!--Order result display-->
+                <table>
+                    <tbody id = "tbody">
+                        <tr>
+                            <th>Ordered Items</th>
+                            <th id = "items"></th>
+                        </tr>
+                        <tr>
+                            <th>Order Time</th>
+                            <th id = "time"></th>
+                            <!--Display current time-->
+                        </tr>
+                        <tr>
+                            <th>Table:</th><!--No.table-->
+                            <th id = "table"></th>
+                        </tr>
+                        <tr>
+                            <th>No. of Guest(s)</th>
+                            <th id = "guest"></th><!--No.of Guests-->
+                        </tr>
+                        <tr>
+                            <th>Descript</th>
+                            <th>Qty</th>
+                        </tr>
+                        <!--javascript fill-->
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Total</td>
+                            <td id = "total"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><a href = "#" onclick = "return undo();">undo</a></td>
+                            <!--undo link-->
+                        </tr>
+                    </tfoot>
+                </table>
+                <script>
+                
+                //table information
+                window.onload = info();
+                //fillin table information
+                function info(){
+                    var t_time = document.querySelector("#time");
+                    var t_table = document.querySelector("#table");
+                    var t_guest = document.querySelector("#guest");
+                    //time
+                    var d = new Date(),
+                            str = '';
+                    str = d.getHours() + ":";
+                    str = str + d.getMinutes();
+                    t_time.innerHTML = str;
+                    //table
+                    var x = Math.random()*100%50+1;
+                    t_table.innerHTML = Math.floor(x);
+                    //guest
+                    if(localStorage.getItem("guest")==""){
+                        t_guest.innerHTML = "Have not booked"
+                    }
+                    else{
+                        t_guest.innerHTML = parseInt(localStorage.getItem("guest"));
+                    }
+                }
+                </script>
+            </div>
+        </div>
+        <footer>
+            <a href = "#header" id = "top">Back to Top</a>
+            <a href = "CW_designpage.html" id = "design">©CityU 2019 source of images and text from Wikimedia Commons and Courtesy of Icon pack by Icon8; designed by CS2204.</a>
+        </footer>
+    </body>
+</html>
