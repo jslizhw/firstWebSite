@@ -1,0 +1,39 @@
+@media print{
+    #menu {
+        display: none;
+    }
+    #interest{
+        display: none;
+    }
+    footer{
+        display: none;
+    }
+    #navblock{
+        display: none;
+    }
+
+    #order{
+        padding:0;
+        margin:0;
+        grid-column-start:1;
+        grid-column-end:3;
+        grid-row-start:1;
+    }
+    table th{
+        background-color: #fff !important;
+        color: black !important;
+    }
+    table{
+        border-color: #000000 !important;
+    }
+    tr td:nth-child(even), tr th:nth-child(even){
+        background-color: rgb(204, 202, 202) !important;
+    }
+    th, td{
+        box-shadow:none !important;
+        border-color: #000000 !important;
+    }
+    a{
+        display: none !important;
+    }
+}

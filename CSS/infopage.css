@@ -1,0 +1,260 @@
+/*
+body{
+    background-color: gray;
+    transition: background 1s ease-in-out;
+}
+div:hover{
+    background-color:lightcoral;
+    transition: background 1s ease-in-out;
+}
+*/
+
+
+
+
+
+
+
+/*guide*/
+
+#guide ul{
+    margin:0em;
+    padding: 0em;
+    width: 14em;
+    height:100%;
+    background-color: #000000;
+    position:fixed;
+    list-style-type: none;
+    z-index: 15;
+}
+#guide ul li{
+    display:inline;
+    padding-left: 0.5em;
+}
+#guide ul li{
+    float:left;
+}
+li a{
+    display:block;
+    color:white;
+    text-align:center;
+    padding:15px 18px;
+    text-decoration:none;
+    font-size:2em;
+}
+li a:hover{
+    transition: 1s ease;
+    background-color:yellowgreen;
+}
+
+
+
+
+/*for narrow screen*/
+@media only screen and (max-width: 768px){
+
+    [id*="reservation"]{
+        padding-top:0em !important;
+        position: relative !important;
+        float:left;
+        max-width:100%;
+        margin-top:0 !important;
+        padding-left: 20%;
+    }
+
+    [id*="guide"]{
+        visibility: hidden;
+    }
+    [id*="video"]{
+        margin-top: 250px;
+        padding-left:0 !important;
+    }
+    [id*="MainContainer"]{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    [class*="button"]{
+        padding:0 !important;
+    }
+    [id*="shopinfo"]{
+        padding:0 !important;
+        margin:0;
+        grid-template-columns: 100%;
+    }
+    [class*="box"]{
+        width: 100% !important;
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+        grid-column-start: 1;
+        grid-column-end:3;
+    }
+}
+
+
+
+
+/*reservation*/
+#reservation{
+    margin-top:16em;
+    position:fixed;
+    text-align: center;
+    z-index: 15;
+}
+
+
+#reservation legend{
+    font-size:1.5em;
+    padding-top:15px;
+}
+
+#reservation fieldset{
+    width:13em;
+    background-color:#fff;
+    border: #000000 solid thin;
+    padding-right: 0.5em;
+    padding-bottom: 0.2em;
+    float: right;
+    z-index: 15;
+}
+fieldset label, fieldset input{
+    padding-left: 0.2em;
+}
+
+input:hover{
+    background-color:rgba(153, 205, 50, 0.795);
+    transition: 1s linear;
+}
+select:hover{
+    background-color:rgba(153, 205, 50, 0.795);
+    transition: 1s linear;
+}
+
+/*video block*/
+#video{
+    display: block;
+    padding-left: 15em;
+    max-width: 100%;
+    position: relative;
+    padding-top: 0;
+    z-index: 9;
+}
+#video > h4{
+    text-align: center;
+    border:#000000 groove;
+}
+#video > h4:hover{
+    letter-spacing:1px;
+}
+.video{
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+}
+
+
+
+/*maincontainer*/
+#MainContainer{
+    padding-left: 15rem;
+    padding-right: 10rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 1em;
+}
+h2{
+    padding-left:10%;
+}
+
+#shopinfo{
+    max-width:100%;
+    display:grid;
+    grid-template-columns: 50% 50%;
+    padding-left: 10%;
+}
+
+#shopinfo ul li{
+    list-style: none;
+}
+
+
+
+
+.box{
+    margin-top:10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right:10px;
+    width: 70%;
+    position: relative;
+    min-height: 1px;
+    padding: 5%;
+    display: block;
+    border-style:groove;
+    box-shadow: gray 7px 7px;
+    justify-self:center;
+}
+
+.box h3{
+    font-size:2em;
+    display: inline;
+    text-align: center;
+}
+
+.box li{
+    font-size:1.5rem;
+}
+
+.info{
+    font-size:1.5rem;
+    font-style: italic;
+}
+
+.describe{
+    margin-left:0 !important;
+    margin-right: 0 !important;
+    font-family: 'Times New Roman', Times, serif;
+    font-size:1.3rem;
+}
+.box:hover{
+    background-color: rgba(153, 205, 50, 0.637);
+    transition: ease-out 1s;
+}
+
+
+
+.map{
+    float:none;
+    z-index:30;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.map img{
+    transition: all 1s;
+    display: block;
+
+}
+
+.map img:hover, .map img:focus{
+    transform: scale(1.5);
+}
+
+
+.button{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    position: relative;
+    min-width: 5px;
+    max-width: 50%;
+    z-index:10;
+    margin-top: 10px;
+    padding:0 !important;
+    border:none !important;
+    background:none !important;
+    justify-self:center;
+}
+
+.button img{
+    width: 100%；
+}
+
+

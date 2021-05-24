@@ -1,0 +1,253 @@
+/*page layout*/
+#pagecontainer{
+    display:grid;
+    grid-template-columns: 20% 80%;
+}
+
+#navblock{
+    grid-column-start:1;
+    grid-row-start:1;
+    grid-row-end: 4;
+    display: block;
+    background-color: #000000;
+}
+#navblock a{
+    float: left;
+    clear:left;
+    text-decoration: none;
+    color: #fff;
+    font-size: 2em;
+    line-height: 3em;
+    width: 100%;
+}
+#navblock a:hover{
+    background-color: yellowgreen;
+    transition: 1s ease-in-out;
+}
+#menu{
+    grid-column-start:2;
+}
+#interest{
+    grid-column-start:2;
+}
+#order{
+    grid-column-start:2;
+}
+
+
+
+
+
+#navbar{
+    display:block;
+    float:left;
+    position: fixed;
+    width: 30%;
+    height: 100%;
+    color: #fff;
+}
+
+
+
+
+
+/*dropdown menu block*/
+#menu{
+    width:100%;
+    max-width: 100%;
+    display: block;
+}
+
+fieldset{
+    padding-bottom: 20px;
+    border: none;
+}
+
+legend{
+    font-size: 3em;
+    text-align: center;
+}
+
+.dropdown{
+    margin-top:2em;
+    max-width:100%;
+}
+
+#drinks{
+    display: none;
+}
+
+#dessert{
+    display: none;
+}
+
+.dropmenu{
+    position: absolute;
+    width:100%;
+    background-color: #fff;
+}
+
+
+.grid{
+    display:grid;
+    grid-template-columns: repeat(3,26%);
+}
+
+#menu img{
+    max-width: 100%;
+    width: 10rem;
+    height: auto;
+}
+
+.s-0, .d-0, .ds-0{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+    font-size:2em;
+
+}
+.s-0{
+    width:26%;
+    position: absolute;
+    display:block !important;
+    z-index: 10;
+    background-color:#fff;
+    color: #000000;
+}
+.d-0{
+    width:26%;
+    position: absolute;
+    margin-left:26%;
+    display:block !important;
+    z-index: 6;
+    background-color:#000000;
+    color: #fff;
+}
+.ds-0{
+    width:26%;
+    position: absolute;
+    margin-left:52%;
+    display:block !important;
+    z-index: 2;
+    background-color:#000000;
+    color: #fff;
+}
+
+
+
+/*animation*/
+#interest{
+    position: absolute;
+    margin-left: 3%;
+    margin-top: 25em;
+    width:150px;
+    height:150px;
+    background-color:yellowgreen;
+    z-index:-9;
+    text-align: center;
+    animation-name:roll;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: roll;
+    -webkit-animation-duration: 40s;
+    -webkit-animation-iteration-count: infinite;
+}
+#interest p{
+    line-height: 65px;
+    display:inline-block;
+}
+#interest p span{
+    font-size: 2em;
+}
+@keyframes roll{
+    0%{background-color:yellowgreen;transform:rotate(0);
+        margin-left:23%;margin-top:19em;}
+    25%{background-color:rgb(32, 212, 173);transform:rotate(360deg);
+        margin-left:85%;margin-top:19em;}
+    50%{background-color:rgb(52, 124, 218);transform:rotate(0);
+        margin-left:85%;margin-top:29em;}
+    75%{background-color:rgb(241, 121, 74);transform:rotate(360deg);
+        margin-left:23%;margin-top:29em;}
+    100%{background-color:yellowgreen;transform:rotate(0);
+        margin-left:23%;margin-top:19em;}
+}
+
+@-webkit-keyframes roll{
+    0%{background-color:yellowgreen;transform:rotate(0);
+        margin-left:23%;margin-top:19em;}
+    25%{background-color:rgb(32, 212, 173);transform:rotate(360deg);
+        margin-left:85%;margin-top:19em;}
+    50%{background-color:rgb(52, 124, 218);transform:rotate(0);
+        margin-left:85%;margin-top:29em;}
+    75%{background-color:rgb(241, 121, 74);transform:rotate(360deg);
+        margin-left:23%;margin-top:29em;}
+    100%{background-color:yellowgreen;transform:rotate(0);
+        margin-left:23%;margin-top:19em;}
+}
+
+
+
+/*order information*/
+#order{
+    margin-top: 35em;
+}
+
+
+
+td{
+    border-collapse: collapse;
+    width:100%;
+}
+
+#order td, #order th{
+    border: 1px solid #fff;
+    padding: 8px;
+    box-shadow: rgb(66, 60, 60) 2px 2px;
+}
+
+#order tr:nth-child(even){
+    background-color: #d8d1d1;
+}
+
+#order th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+#order tr td:last-child, #order tr th:last-child{
+    text-align:right;
+}
+
+#order tr:hover{
+    background-color:#ddd;
+    color: #000000;
+}
+
+#order tfoot{
+    color: #fff;
+    background-color: #000000;
+}
+/*undo*/
+#order a{
+    display:block;
+    text-decoration:none;
+    background-color:#000000;
+    color: #fff;
+    text-align: center;
+    font-size:2em;
+}
+
+
+#order a:focus, #order a:active, #order a:visited{
+    background-color:#000000;
+    color:#fff;
+}
+#top{
+    visibility: visible !important;
+}
+
+
+
